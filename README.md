@@ -30,13 +30,15 @@ Use len() to find the total words.
 #RegisterNumber: 212222240004
 
 import sys
-fp= open(sys.argv[1])
-data=fp.read()
-words=data.split()
-print("Total Words:",len(words))
+count = 0
+with open (sys.argv[1],'r') as f1:
+    for line in f1:
+        word = line.split()
+        count += len (word)
+print("word count in file = ",count)
 ```
 ### OUTPUT:
-![image](https://github.com/Afsarjumail/command-line-arguments-to-count-word/assets/118343395/620d4d78-4382-40c6-95a2-0b5ffeccea84)
+![image](https://github.com/Afsarjumail/command-line-arguments-to-count-word/assets/118343395/25a4d784-87b8-46d5-827a-884aff68575d)
 
 
 
